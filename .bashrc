@@ -129,7 +129,7 @@ alias synckernel="(cd ~/crDroid && repo sync kernel/oneplus/sm8350 --force-sync 
 
 alias codium='codium --password-store="basic"'
 
-alias fixclip='pkill -u $USER -f "vmtoolsd -n vmusr" ; /usr/bin/vmtoolsd -n vmusr > /dev/null 2>&1 & disown'
+alias fixclip='sudo killall -9 vmtoolsd; sudo systemctl start open-vm-tools.service; nohup vmtoolsd -n vmusr >/dev/null 2>&1 &'
 
 alias buildlemonadep='~/build_lemonadep.sh'
 
@@ -140,8 +140,6 @@ alias c='clear'
 alias e='exit'
 
 alias x='exit'
-
-alias v='codium' # veya vim/nvim kullanıyorsan onu yazabilirsin
 
 alias h='history'
 

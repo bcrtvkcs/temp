@@ -129,7 +129,7 @@ alias synckernel="(cd ~/crDroid && repo sync kernel/oneplus/sm8350 --force-sync 
 
 alias codium='codium --password-store="basic"'
 
-alias fixclip='sudo killall -9 vmtoolsd; sudo systemctl start open-vm-tools.service; nohup vmtoolsd -n vmusr >/dev/null 2>&1 &'
+alias clipfix='sudo systemctl restart open-vm-tools.service && sleep 1 && killall -q -u $USER vmtoolsd; vmware-user-suid-wrapper >/dev/null 2>&1 &'
 
 alias buildlemonadep='~/build_lemonadep.sh'
 

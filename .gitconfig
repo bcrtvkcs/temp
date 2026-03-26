@@ -1,0 +1,28 @@
+[user]
+	name = K. Cihan Sipahi
+	email = kc.sipahi@gmail.com
+[color]
+	ui = auto
+[http]
+	postBuffer = 524288000
+	maxRequestBuffer = 200M
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit
+	sw = switch
+	rs = restore
+	rb = rebase
+	cp = cherry-pick
+	wt = worktree
+	dt = difftool
+	mt = mergetool
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	a = add
+	p = push
+	pl = pull
+	d = diff
+	l = log
+	sh = show
+	t = tag

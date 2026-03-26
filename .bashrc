@@ -125,7 +125,10 @@ export HISTFILESIZE=20000
 
 # Immediate sync (optional, writes to file after every command)
 export PROMPT_COMMAND="history -a; history -w; history -c; history -r; $PROMPT_COMMAND"
-alias synckernel="(cd ~/crDroid && repo sync kernel/oneplus/sm8350 --force-sync && cd ~/crDroid/kernel/oneplus/sm8350 && git remote set-url github git@github.com:bcrtvkcs/aesir_kernel_oneplus_sm8350.git && cd ~/aesir_kernel_oneplus_sm8350/KernelSU-Next && git fetch upstream --tags && git push origin --tags && cd ~/crDroid/kernel/oneplus/sm8350 && git submodule update --remote --init --recursive)"
+
+alias synckernel="(cd ~/crDroid && repo sync kernel/oneplus/sm8350 --force-sync && cd ~/crDroid/kernel/oneplus/sm8350 && git remote set-url github git@github.com:bcrtvkcs/aesir_kernel_oneplus_sm8350.git && cd ~/aesir_kernel_oneplus_sm8350/KernelSU-Next && git fetch origin --tags && git push origin --tags && cd ~/crDroid/kernel/oneplus/sm8350 && git submodule update --remote --init --recursive)"
+
+alias reposync="(cd ~/crDroid && repo sync)"
 
 alias codium='codium --password-store="basic"'
 

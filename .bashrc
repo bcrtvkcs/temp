@@ -166,5 +166,7 @@ grepstein() {
     (cd ~/grepstein && ./grepstein.sh "$@")
 }
 
+alias update='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove && sudo apt autopurge && sudo apt purge && sudo apt clean'
+
 # source ~/.bashrc
 

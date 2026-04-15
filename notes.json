@@ -2,12 +2,12 @@
     "Group 1": [
         {
             "x": 1522,
-            "y": 328,
+            "y": 321,
             "height": 558,
             "width": 377,
             "color": "orange",
             "title": "",
-            "text": "curl -LSs \"https://raw.githubusercontent.com/bcrtvkcs/KernelSU-Next/refs/heads/legacy/kernel/setup.sh\" | bash -s legacy\n\nsynckernel\n\nreposync\n\nbuildlemonadep\n\n\ngit remote add crdroid https://github.com/crdroidandroid/android_kernel_oneplus_sm8350.git\n\ngit fetch crdroid 16.0\n\ngit merge -s ours crdroid/16.0 -m \"Sync history with upstream crdroid\"\n\ngit push origin 16.0\n\n\ngit fetch upstream legacy\n\ngit merge -s ours upstream/legacy -m \"Sync history with upstream KernelSU-Next\"\n\ngit push --force origin legacy\n\n\ngit remote add upstream https://gitlab.com/simonpunk/susfs4ksu.git\n\ngit fetch upstream\n\ngit checkout gki-android16-6.12\n\ngit rebase upstream/gki-android16-6.12\n\ngit push origin gki-android16-6.12\n\ngit checkout gki-android16-5.4\n\n\nsudo vmware-toolbox-cmd disk shrink /\n\n\nnuclei -u http://localhost/aeronix.com.tr/index.htm -tags misconfiguration,exposure,file,technologies,generic -rl 150 -c 50"
+            "text": "curl -LSs \"https://raw.githubusercontent.com/bcrtvkcs/KernelSU-Next/refs/heads/legacy/kernel/setup.sh\" | bash -s legacy\n\nsynckernel\n\nreposync\n\nbuildlemonadep\n\n\ngit remote add crdroid https://github.com/crdroidandroid/android_kernel_oneplus_sm8350.git\n\ngit fetch crdroid 16.0\n\ngit merge -s ours crdroid/16.0 -m \"Sync history with upstream crdroid\"\n\ngit push origin 16.0\n\n\ngit fetch upstream legacy\n\ngit merge -s ours upstream/legacy -m \"Sync history with upstream KernelSU-Next\"\n\ngit push --force origin legacy\n\n\ngit remote add upstream https://github.com/KernelSU-Next/KernelSU-Next.git\n\ngit fetch upstream --tags\n\ngit push origin --tags\n\n\ngit remote add upstream https://gitlab.com/simonpunk/susfs4ksu.git\n\ngit fetch upstream\n\ngit checkout gki-android16-6.12\n\ngit rebase upstream/gki-android16-6.12\n\ngit push origin gki-android16-6.12\n\ngit checkout gki-android16-5.4\n\n\nsudo vmware-toolbox-cmd disk shrink /\n\n\nnuclei -u http://localhost/aeronix.com.tr/index.htm -tags misconfiguration,exposure,file,technologies,generic -rl 150 -c 50"
         }
     ]
 }

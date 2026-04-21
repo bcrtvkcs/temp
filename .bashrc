@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -115,8 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-export PROMPT_COMMAND="history -a; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 alias synckernel="(cd ~/crDroid && repo sync kernel/oneplus/sm8350 --force-sync && cd ~/crDroid/kernel/oneplus/sm8350 && git remote set-url github git@github.com:bcrtvkcs/aesir_kernel_oneplus_sm8350.git && git submodule update --init --recursive && cd ~/crDroid/kernel/oneplus/sm8350/KernelSU-Next && git remote set-url origin git@github.com:bcrtvkcs/KernelSU-Next.git && git fetch origin --tags --prune --prune-tags)"
 

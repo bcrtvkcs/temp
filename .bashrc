@@ -8,8 +8,16 @@ case $- in
       *) return;;
 esac
 
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
 # append to the history file, don't overwrite it
 shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -108,58 +116,27 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=~/bin:$PATH
-export USE_CCACHE=1
-export CCACHE_EXEC=$(which ccache)
-stty intr ^p
-
-# ignoreboth: ignores commands starting with space and immediate duplicates
-# erasedups: removes all previous instances of the command from history
-export HISTCONTROL=ignoreboth:erasedups
-shopt -s histappend
-export PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND:-}"
-
-# Increase history size (optional)
-export HISTSIZE=10000
-export HISTFILESIZE=20000
-
-# Immediate sync (optional, writes to file after every command)
 export PROMPT_COMMAND="history -a; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 alias synckernel="(cd ~/crDroid && repo sync kernel/oneplus/sm8350 --force-sync && cd ~/crDroid/kernel/oneplus/sm8350 && git remote set-url github git@github.com:bcrtvkcs/aesir_kernel_oneplus_sm8350.git && git submodule update --init --recursive && cd ~/crDroid/kernel/oneplus/sm8350/KernelSU-Next && git remote set-url origin git@github.com:bcrtvkcs/KernelSU-Next.git && git fetch origin --tags --prune --prune-tags)"
 
 alias reposync="(cd ~/crDroid && repo sync)"
 
-alias codium='codium --password-store="basic"'
-
-alias clipfix='sudo systemctl restart open-vm-tools.service && sleep 1 && killall -q -u $USER vmtoolsd; vmware-user-suid-wrapper >/dev/null 2>&1 &'
-
 alias buildlemonadep='~/build_lemonadep.sh'
 
 alias buildlemonade='~/build_lemonade.sh'
 
 alias c='clear'
-
 alias e='exit'
-
 alias x='exit'
-
 alias h='history'
-
 alias g='git'
-
 alias ..='cd ..'
-
 alias ...='cd ../..'
-
 alias ....='cd ../../..'
-
 alias .....='cd ../../../..'
-
 alias rm='rm -i'
-
 alias cp='cp -i'
-
 alias mv='mv -i'
 
 grepstein() {
@@ -168,5 +145,18 @@ grepstein() {
 
 alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoclean && sudo apt autoremove && sudo apt autopurge && sudo apt purge && sudo apt clean'
 
-# source ~/.bashrc
+# ccache
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
 
+# History
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoreboth:erasedups
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -w; history -c; history -r; $PROMPT_COMMAND"
+
+# PATH
+export PATH=/home/blackshark/bin:/home/blackshark/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+# source ~/.bashrc

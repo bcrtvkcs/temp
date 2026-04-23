@@ -157,4 +157,6 @@ export PROMPT_COMMAND="history -a; history -w; history -c; history -r; $PROMPT_C
 # PATH
 export PATH=/home/blackshark/bin:/home/blackshark/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
+alias cdkernel='cd crDroid/kernel/oneplus/sm8350'
+
 # source ~/.bashrc

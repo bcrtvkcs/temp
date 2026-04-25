@@ -29,4 +29,4 @@ fi
 WIN_USER=$(/mnt/c/Windows/System32/cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
 WIN_DOWNLOADS="/mnt/c/Users/${WIN_USER}/Downloads"
 
-find "$HOME/crDroid/out/target/product/lemonadep" -maxdepth 1 -name "crDroidAndroid*.zip" -exec mv -v {} "$WIN_DOWNLOADS/" \;
+find "$HOME/crDroid/out/target/product/lemonade" -maxdepth 1 -name "crDroidAndroid*.zip" -exec mv -v {} "$WIN_DOWNLOADS/" \;

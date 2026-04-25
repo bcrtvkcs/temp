@@ -24,3 +24,9 @@ else
 fi
 
 (cd "$HOME/crDroid" && . build/envsetup.sh && brunch lemonadep && zcat "$HOME/crDroid/out/verbose.log.gz" > "$HOME/buildoutput_lemonadep.log" && grep -Ei "fatal|error|unexpected|fail" "$HOME/buildoutput_lemonadep.log" > "$HOME/builderrors_lemonadep.txt")
+
+# Move crDroid zip(s) to Windows Downloads
+WIN_USER=$(/mnt/c/Windows/System32/cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
+WIN_DOWNLOADS="/mnt/c/Users/${WIN_USER}/Downloads"
+
+find "$HOME/crDroid/out/target/product/lemonadep" -maxdepth 1 -name "crDroidAndroid*.zip" -exec mv -v {} "$WIN_DOWNLOADS/" \;

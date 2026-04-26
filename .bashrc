@@ -159,6 +159,4 @@ export PATH=/home/blackshark/bin:/home/blackshark/platform-tools:/usr/local/sbin
 
 alias cdkernel='cd crDroid/kernel/oneplus/sm8350'
 
-sudo service ssh start 2>/dev/null
-
 # source ~/.bashrc

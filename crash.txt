@@ -1,0 +1,36 @@
+1791670704.648  1047 30959 30959 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+1791670704.648  1047 30959 30959 F DEBUG   : crDroid Version: '13.0-BETA'
+1791670704.648  1047 30959 30959 F DEBUG   : Build fingerprint: 'OnePlus/OnePlus9Pro/OnePlus9Pro:14/UKQ1.230924.001/R.209d31b_1-39324b:user/release-keys'
+1791670704.648  1047 30959 30959 F DEBUG   : Kernel Release: '5.4.302-qgki-gd02ffb5e3996'
+1791670704.648  1047 30959 30959 F DEBUG   : Revision: '0'
+1791670704.648  1047 30959 30959 F DEBUG   : ABI: 'arm64'
+1791670704.648  1047 30959 30959 F DEBUG   : Timestamp: 2026-10-11 01:18:24.570046274+0300
+1791670704.648  1047 30959 30959 F DEBUG   : Process uptime: 0s
+1791670704.648  1047 30959 30959 F DEBUG   : Executable: /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+1791670704.648  1047 30959 30959 F DEBUG   : Cmdline: /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+1791670704.648  1047 30959 30959 F DEBUG   : pid: 30549, ppid: 1, tid: 30665, name: provider@2.4-se  >>> /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64 <<<
+1791670704.648  1047 30959 30959 F DEBUG   : uid: 1047
+1791670704.648  1047 30959 30959 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+1791670704.648  1047 30959 30959 F DEBUG   :     x0  0000000000000000  x1  00000000000077c9  x2  0000000000000006  x3  00000074a83067b0
+1791670704.648  1047 30959 30959 F DEBUG   :     x4  00000074d77d129e  x5  00000074d77d129e  x6  00000074d77d129e  x7  b4000075ce73d960
+1791670704.648  1047 30959 30959 F DEBUG   :     x8  00000000000000f0  x9  0000000000000000  x10 0000000000000000  x11 00000074dcdb43d0
+1791670704.648  1047 30959 30959 F DEBUG   :     x12 00000074dcdb43e0  x13 0000000000000000  x14 00000074a83067a8  x15 0000000000000000
+1791670704.648  1047 30959 30959 F DEBUG   :     x16 0000007773f6d610  x17 0000007773f53100  x18 00000074a08a4000  x19 0000000000000006
+1791670704.648  1047 30959 30959 F DEBUG   :     x20 0000000000007755  x21 00000000000077c9  x22 00000074a8307f00  x23 0000000000000000
+1791670704.648  1047 30959 30959 F DEBUG   :     x24 b40000774eeb33b8  x25 0000000000000780  x26 0000000000000009  x27 0000000000000001
+1791670704.648  1047 30959 30959 F DEBUG   :     x28 b4000075ce739b60  x29 00000074a8306840
+1791670704.648  1047 30959 30959 F DEBUG   :     lr  0000007773ef7bc4  sp  00000074a83067b0  pc  0000007773ef7be8  pst 0000000000001000
+1791670704.648  1047 30959 30959 F DEBUG   :     esr 0000000000000000  vg  0000000000000000
+1791670704.648  1047 30959 30959 F DEBUG   : 9 total frames
+1791670704.648  1047 30959 30959 F DEBUG   : backtrace:
+1791670704.648  1047 30959 30959 F DEBUG   :       #00 pc 0000000000095be8  /apex/com.android.runtime/lib64/bionic/libc.so (raise+136) (BuildId: 37ef6c1b10a8a2d9a8ef331c596ef6b5)
+1791670704.648  1047 30959 30959 F DEBUG   :       #01 pc 0000000000af7d94  /vendor/lib64/hw/camera.qcom.so (CamX::ImageBuffer::Import(CamX::ImageFormat const*, ChiBufferInfo*, unsigned long, unsigned long, unsigned int, int const*, unsigned int, int, int)+2492) (BuildId: f2e0651b7ef3c964b0d3ba1ef3f22673)
+1791670704.648  1047 30959 30959 F DEBUG   :       #02 pc 0000000000b3e8d8  /vendor/lib64/hw/camera.qcom.so (CamX::Node::SetupRequest(CamX::PerBatchedFrameInfo*, unsigned int, int, unsigned long, unsigned long, int*, CamX::ContextTypeID)+6552) (BuildId: f2e0651b7ef3c964b0d3ba1ef3f22673)
+1791670704.648  1047 30959 30959 F DEBUG   :       #03 pc 0000000000b9581c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::ProcessRequest(CamX::PipelineProcessRequestData*)+14452) (BuildId: f2e0651b7ef3c964b0d3ba1ef3f22673)
+1791670704.648  1047 30959 30959 F DEBUG   :       #04 pc 0000000000be32fc  /vendor/lib64/hw/camera.qcom.so (CamX::Session::ProcessRequest()+13428) (BuildId: f2e0651b7ef3c964b0d3ba1ef3f22673)
+1791670704.648  1047 30959 30959 F DEBUG   :       #05 pc 0000000000acb08c  /vendor/lib64/hw/camera.qcom.so (CamX::CHISession::ThreadJobCallback(void*) (.cfi)+268) (BuildId: f2e0651b7ef3c964b0d3ba1ef3f22673)
+1791670704.648  1047 30959 30959 F DEBUG   :       #06 pc 00000000009e0294  /vendor/lib64/hw/camera.qcom.so (CamX::ThreadCore::WorkerThreadBody(void*) (.cfi)+1692) (BuildId: f2e0651b7ef3c964b0d3ba1ef3f22673)
+1791670704.648  1047 30959 30959 F DEBUG   :       #07 pc 0000000000091880  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+176) (BuildId: 37ef6c1b10a8a2d9a8ef331c596ef6b5)
+1791670704.648  1047 30959 30959 F DEBUG   :       #08 pc 0000000000080284  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 37ef6c1b10a8a2d9a8ef331c596ef6b5)
+1791670704.648  1047 30959 30959 F DEBUG   : Note: To display stack pointer information, use the pbtombstone tool:
+1791670704.648  1047 30959 30959 F DEBUG   :         pbtombstone --display-sp tombstone_XX.pb
